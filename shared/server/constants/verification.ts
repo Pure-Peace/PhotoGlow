@@ -1,0 +1,3 @@
+import { REDIS_KEY_PREFIXES } from './redis'
+
+export const VERIFICATION_KEY = REDIS_KEY_PREFIXES.VERIFICATION_CODE

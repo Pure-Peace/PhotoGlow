@@ -1,0 +1,24 @@
+{
+  "name": "@photoglow/database",
+  "private": true,
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "bun run --env-file=../.env prisma generate",
+    "migrate": "bun run --env-file=../.env prisma migrate dev --name dev",
+    "reset": "bun run --env-file=../.env prisma migrate reset",
+    "push": "bun run --env-file=../.env prisma db push",
+    "pull": "bun run --env-file=../.env prisma db pull"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.6.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

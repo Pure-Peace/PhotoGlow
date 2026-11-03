@@ -1,0 +1,3035 @@
+{
+	"info": {
+		"name": "PhotoGlow API",
+		"description": {
+		    "content": "The Photo Glow API documentation",
+		    "type": "text/markdown"
+		},
+		"version": "0.1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+	        {
+	            "name": "App",
+	            "item": [
+	                        {
+    "name": "/api/v1/running",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "appControllerRunningV1",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/running",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "running"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "settings",
+	            "item": [
+	                        {
+    "name": "/api/v1/settings/email",
+                "description": "Updates the email address for the authenticated user. Requires current password and email verification code.",
+                 "item": [
+                            {
+                                "name": "Update user email",
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"currentPassword\": \"<string>\",\n \"verificationCode\": \"<string>\",\n \"newEmail\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/settings/email",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "settings",
+                                            "email"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Updates the email address for the authenticated user. Requires current password and email verification code."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/settings/password",
+                "description": "Updates the password for the authenticated user. Requires current password verification.",
+                 "item": [
+                            {
+                                "name": "Update user password",
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"currentPassword\": \"<string>\",\n \"newPassword\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/settings/password",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "settings",
+                                            "password"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Updates the password for the authenticated user. Requires current password verification."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/settings/password/reset",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Reset user password",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"email\": \"<string>\",\n \"verification\": \"<string>\",\n \"password\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/settings/password/reset",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "settings",
+                                            "password",
+                                            "reset"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Topics",
+	            "item": [
+	                        {
+    "name": "/api/v1/topics/:topicName",
+                "description": "Retrieves detailed information about a specific topic using its name.",
+                 "item": [
+                            {
+                                "name": "Get topic information by name",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/topics/:topicName",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "topics",
+                                            ":topicName"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "topicName",
+                                                "value": "",
+                                                "description": "Topic name to search for"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieves detailed information about a specific topic using its name."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/topics/:topicName/posts",
+                "description": "Retrieves paginated posts belonging to a specific topic with detailed interaction information.",
+                 "item": [
+                            {
+                                "name": "Get posts for a specific topic",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/topics/:topicName/posts",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "topics",
+                                            ":topicName",
+                                            "posts"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "topicName",
+                                                "value": "",
+                                                "description": "Topic name to get posts from"
+                                            }
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "offset",
+                                                "value": "0",
+                                                "description": "Number of posts to skip (for pagination)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "limit",
+                                                "value": "10",
+                                                "description": "Maximum number of posts to return",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Retrieves paginated posts belonging to a specific topic with detailed interaction information."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/topics/popular",
+                "description": "Retrieves the top 10 most popular topics based on the number of posts.",
+                 "item": [
+                            {
+                                "name": "Get popular topics sorted by post count",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/topics/popular",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "topics",
+                                            "popular"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieves the top 10 most popular topics based on the number of posts."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "User",
+	            "item": [
+	                        {
+    "name": "/api/v1/user",
+                "description": "Permanently delete the authenticated user&apos;s account",
+                 "item": [
+                            {
+                                "name": "Delete user account",
+                                "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/user",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "user"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Permanently delete the authenticated user&apos;s account"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/user/:username/profile",
+                "description": "Retrieves detailed user profile information including stats and relationship status if authenticated",
+                 "item": [
+                            {
+                                "name": "Get user profile by username",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/user/:username/profile",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "user",
+                                            ":username",
+                                            "profile"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "username",
+                                                "value": "",
+                                                "description": "Username of the user whose profile is being requested"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieves detailed user profile information including stats and relationship status if authenticated"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/user/profile",
+                "description": "Update authenticated user's profile information including avatar",
+                 "item": [
+                            {
+                                "name": "Update user profile",
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "multipart/form-data",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/user/profile",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "user",
+                                            "profile"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Update authenticated user's profile information including avatar"
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Moderation",
+	            "item": [
+	                        {
+    "name": "/api/v1/moderation/report/post",
+                "description": "Report a post that violates community guidelines or rules",
+                 "item": [
+                            {
+                                "name": "Report post",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"postId\": \"<string>\",\n \"reason\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/moderation/report/post",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "moderation",
+                                            "report",
+                                            "post"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Report a post that violates community guidelines or rules"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/moderation/report/user",
+                "description": "Report a user that violates community guidelines or rules",
+                 "item": [
+                            {
+                                "name": "Report user",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"userId\": \"<string>\",\n \"reason\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/moderation/report/user",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "moderation",
+                                            "report",
+                                            "user"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Report a user that violates community guidelines or rules"
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Comments",
+	            "item": [
+	                        {
+    "name": "/api/v1/comments/:commentId",
+                "description": "Delete a comment. Only the comment author can delete their own comments",
+                 "item": [
+                            {
+                                "name": "Delete a comment",
+                                "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/comments/:commentId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "comments",
+                                            ":commentId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "commentId",
+                                                "value": "",
+                                                "description": "The unique identifier of the comment to delete"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Delete a comment. Only the comment author can delete their own comments"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/comments/posts/:postId",
+                "description": "Retrieve comments for a specific post with optional pagination and filtering",
+                 "item": [
+                            {
+                                "name": "Get comments for a post",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/comments/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "comments",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "The unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "parentId",
+                                                "value": "parentId_example",
+                                                "description": "Parent comment ID to get replies. If not provided, returns top-level comments",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "limit",
+                                                "value": "8.14",
+                                                "description": "Number of comments to return (default: 10)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "offset",
+                                                "value": "8.14",
+                                                "description": "Number of comments to skip for pagination (default: 0)",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Retrieve comments for a specific post with optional pagination and filtering"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/comments/posts/:postId/create",
+                "description": "Create a new comment or reply to an existing comment on a post",
+                 "item": [
+                            {
+                                "name": "Create a comment on a post",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"content\": \"<string>\",\n \"parentId\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/comments/posts/:postId/create",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "comments",
+                                            "posts",
+                                            ":postId",
+                                            "create"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "The unique identifier of the post to comment on"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Create a new comment or reply to an existing comment on a post"
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Media",
+	            "item": [
+	                        {
+    "name": "/api/v1/media/my/drafts",
+                "description": "Retrieves all pending media drafts for the currently authenticated user.",
+                 "item": [
+                            {
+                                "name": "Get user media drafts",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/media/my/drafts",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "media",
+                                            "my",
+                                            "drafts"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieves all pending media drafts for the currently authenticated user."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/media/upload",
+                "description": "Upload a media file (image, video, etc.) to the server. The file will be processed and stored.",
+                 "item": [
+                            {
+                                "name": "Upload media file",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "multipart/form-data",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/media/upload",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "media",
+                                            "upload"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Upload a media file (image, video, etc.) to the server. The file will be processed and stored."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Posts",
+	            "item": [
+	                        {
+    "name": "/api/v1/posts",
+                "description": "Retrieve a list of posts with optional filtering, pagination, and user-specific content",
+                 "item": [
+                            {
+                                "name": "Get posts list",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/posts",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "posts"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "limit",
+                                                "value": "18",
+                                                "description": "Number of posts to return (default: 18)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "offset",
+                                                "value": "0",
+                                                "description": "Number of posts to skip (default: 0)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "filter",
+                                                "value": "filter_example",
+                                                "description": "Filter posts by type - \"following\" shows posts from followed users only",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "order",
+                                                "value": "order_example",
+                                                "description": "Sort order for posts (default: desc)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "username",
+                                                "value": "username_example",
+                                                "description": "Get posts for a specific user",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "type",
+                                                "value": "type_example",
+                                                "description": "Type of posts to retrieve when username is specified (default: all)",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Retrieve a list of posts with optional filtering, pagination, and user-specific content"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/posts/:postId",
+                "description": "Permanently delete a post and all associated media",
+                 "item": [
+                            {
+                                "name": "Delete a post",
+                                "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "ID of the post to delete"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Permanently delete a post and all associated media"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/posts/:postId",
+                "description": "Retrieve detailed information about a specific post",
+                 "item": [
+                            {
+                                "name": "Get post by ID",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "Unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieve detailed information about a specific post"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/posts/:postId",
+                "description": "Update an existing post's content, media, location, topics, or tags",
+                 "item": [
+                            {
+                                "name": "updateExample",
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"title\" : \"Updated sunset photo\",\n  \"content\" : \"Updated description of the sunset #nature\",\n  \"visibility\" : \"PUBLIC\",\n  \"media\" : [ {\n    \"url\" : \"https://example.com/sunset-edited.jpg\",\n    \"type\" : \"IMAGE\",\n    \"alt\" : \"Edited sunset over the ocean\",\n    \"order\" : 0\n  } ],\n  \"topicIds\" : [ \"nature-topic-id\" ],\n  \"tagIds\" : [ \"sunset-tag-id\" ]\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "ID of the post to update"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Update an existing post's content, media, location, topics, or tags"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/posts/create",
+                "description": "Create a new post with media, location, topics, and tags",
+                 "item": [
+                            {
+                                "name": "photoPost",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"title\" : \"Beautiful sunset\",\n  \"content\" : \"Captured this amazing sunset today! #nature #photography\",\n  \"visibility\" : \"PUBLIC\",\n  \"type\" : \"PHOTO\",\n  \"media\" : [ {\n    \"url\" : \"https://example.com/sunset.jpg\",\n    \"type\" : \"IMAGE\",\n    \"alt\" : \"Sunset over the ocean\",\n    \"order\" : 0\n  } ],\n  \"locationId\" : \"123e4567-e89b-12d3-a456-426614174000\",\n  \"topicIds\" : [ \"nature-topic-id\", \"photography-topic-id\" ],\n  \"tagIds\" : [ \"sunset-tag-id\", \"landscape-tag-id\" ]\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/posts/create",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "posts",
+                                            "create"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Create a new post with media, location, topics, and tags"
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Relationships",
+	            "item": [
+	                        {
+    "name": "/api/v1/social/block/:userId",
+                "description": "Block a user by their user ID. This will also automatically unfollow the user in both directions.",
+                 "item": [
+                            {
+                                "name": "Block a user",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/block/:userId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "block",
+                                            ":userId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "userId",
+                                                "value": "",
+                                                "description": "The ID of the user to block"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Block a user by their user ID. This will also automatically unfollow the user in both directions."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/social/follow/:userId",
+                "description": "Follow or unfollow a user by their user ID. Returns the new following status.",
+                 "item": [
+                            {
+                                "name": "follow",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"following\" : true\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/follow/:userId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "follow",
+                                            ":userId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "userId",
+                                                "value": "",
+                                                "description": "The ID of the user to follow/unfollow"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Follow or unfollow a user by their user ID. Returns the new following status."
+                                }
+                            },
+                            {
+                                "name": "unfollow",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"following\" : false\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/follow/:userId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "follow",
+                                            ":userId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "userId",
+                                                "value": "",
+                                                "description": "The ID of the user to follow/unfollow"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Follow or unfollow a user by their user ID. Returns the new following status."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/social/followers/:username",
+                "description": "Get a list of users who follow the specified user. If authenticated, includes relationship status.",
+                 "item": [
+                            {
+                                "name": "Get user followers",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/followers/:username",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "followers",
+                                            ":username"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "username",
+                                                "value": "",
+                                                "description": "The username of the user whose followers to retrieve"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Get a list of users who follow the specified user. If authenticated, includes relationship status."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/social/following/:username",
+                "description": "Get a list of users that the specified user follows. If authenticated, includes relationship status.",
+                 "item": [
+                            {
+                                "name": "Get users followed by a user",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/following/:username",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "following",
+                                            ":username"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "username",
+                                                "value": "",
+                                                "description": "The username of the user whose following list to retrieve"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Get a list of users that the specified user follows. If authenticated, includes relationship status."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/social/me/blocked",
+                "description": "Get a list of users that the current authenticated user has blocked.",
+                 "item": [
+                            {
+                                "name": "Get blocked users",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/me/blocked",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "me",
+                                            "blocked"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Get a list of users that the current authenticated user has blocked."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/social/unblock/:userId",
+                "description": "Unblock a previously blocked user by their user ID.",
+                 "item": [
+                            {
+                                "name": "Unblock a user",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/social/unblock/:userId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "social",
+                                            "unblock",
+                                            ":userId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "userId",
+                                                "value": "",
+                                                "description": "The ID of the user to unblock"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Unblock a previously blocked user by their user ID."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Mention Suggestions",
+	            "item": [
+	                        {
+    "name": "/api/v1/mentions/topics",
+                "description": "Returns a list of topics matching the search query for mention suggestions. Limited to 10 results.",
+                 "item": [
+                            {
+                                "name": "Search topics for mentions",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/mentions/topics",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "mentions",
+                                            "topics"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "query",
+                                                "value": "query_example",
+                                                "description": "Search query to filter topics by name",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Returns a list of topics matching the search query for mention suggestions. Limited to 10 results."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/mentions/users",
+                "description": "Returns a list of users matching the search query for mention suggestions. Limited to 10 results.",
+                 "item": [
+                            {
+                                "name": "Search users for mentions",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Authorization",
+                                            "value": "",
+                                            "description": "Bearer token for authentication. If provided, will exclude the authenticated user from results.",
+                                            "disabled": true
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/mentions/users",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "mentions",
+                                            "users"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "query",
+                                                "value": "query_example",
+                                                "description": "Search query to filter users by username or display name",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Returns a list of users matching the search query for mention suggestions. Limited to 10 results."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Authentication",
+	            "item": [
+	                        {
+    "name": "/api/v1/auth",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Get current user info",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/google",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Delete google oauth account",
+                                "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/google",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "google"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/google",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Google OAuth",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/google",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "google"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "token",
+                                                "value": "token_example",
+                                                "description": "",
+                                                "disabled": false
+                                            }
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/google/callback",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Google OAuth callback",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/google/callback",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "google",
+                                            "callback"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/login",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "User login",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"email\": \"<string>\",\n \"password\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/login",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "login"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/logout",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "User logout",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/logout",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "logout"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/oauth-accounts",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Get current user oauth accounts",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/oauth-accounts",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "oauth-accounts"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/refresh",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Refresh access token using refresh token",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"refreshToken\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/refresh",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "refresh"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/register",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "User registration",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"email\": \"<string>\",\n \"password\": \"<string>\",\n \"username\": \"<string>\",\n \"verification\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/register",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "register"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/auth/verification/send",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Send email verification code",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"email\": \"<string>\",\n \"type\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/auth/verification/send",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "verification",
+                                            "send"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": ""
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Search",
+	            "item": [
+	                        {
+    "name": "/api/v1/search",
+                "description": "Search across multiple entities including posts, users and topics. Returns paginated results for each entity type.",
+                 "item": [
+                            {
+                                "name": "Search for posts, users and topics",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/search",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "search"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "q",
+                                                "value": "q_example",
+                                                "description": "Search query string to match against posts, users and topics",
+                                                "disabled": false
+                                            }
+                                        ]
+                                    },
+                                    "description": "Search across multiple entities including posts, users and topics. Returns paginated results for each entity type."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Chat",
+	            "item": [
+	                        {
+    "name": "/api/v1/chat",
+                "description": "Retrieves all conversations for the authenticated user. Can optionally get a specific conversation or prepare a new one with a target user.",
+                 "item": [
+                            {
+                                "name": "Get user conversations",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/chat",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "chat"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "targetUserId",
+                                                "value": "123e4567-e89b-12d3-a456-426614174000",
+                                                "description": "Target user ID to get or prepare conversation with",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "conversationId",
+                                                "value": "987fcdeb-51a2-43f7-9abc-123456789012",
+                                                "description": "Conversation ID to get full details",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "includeMessages",
+                                                "value": "true",
+                                                "description": "Whether to include messages in the response",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Retrieves all conversations for the authenticated user. Can optionally get a specific conversation or prepare a new one with a target user."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/chat/:id/send",
+                "description": "Sends a new message in an existing conversation. The sender must be a participant in the conversation.",
+                 "item": [
+                            {
+                                "name": "Send a message in a conversation",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"content\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/chat/:id/send",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "chat",
+                                            ":id",
+                                            "send"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "id",
+                                                "value": "",
+                                                "description": "Conversation ID"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Sends a new message in an existing conversation. The sender must be a participant in the conversation."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/chat/create",
+                "description": "Creates a new conversation with another user and optionally sends an initial message.",
+                 "item": [
+                            {
+                                "name": "Create a new conversation",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"participantId\": \"<string>\",\n \"initialMessage\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/chat/create",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "chat",
+                                            "create"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Creates a new conversation with another user and optionally sends an initial message."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/chat/messages/read",
+                "description": "Marks multiple messages as read for the current user. Only messages where the user is a participant can be marked as read.",
+                 "item": [
+                            {
+                                "name": "Mark messages as read",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"messageIds\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/chat/messages/read",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "chat",
+                                            "messages",
+                                            "read"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Marks multiple messages as read for the current user. Only messages where the user is a participant can be marked as read."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Interactions",
+	            "item": [
+	                        {
+    "name": "/api/v1/actions/likes/comments/:commentId",
+                "description": "Toggle like status on a comment. Creates a notification for the comment author when liked.",
+                 "item": [
+                            {
+                                "name": "like",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"liked\" : true\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/likes/comments/:commentId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "likes",
+                                            "comments",
+                                            ":commentId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "commentId",
+                                                "value": "",
+                                                "description": "Unique identifier of the comment"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle like status on a comment. Creates a notification for the comment author when liked."
+                                }
+                            },
+                            {
+                                "name": "unlike",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"liked\" : false\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/likes/comments/:commentId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "likes",
+                                            "comments",
+                                            ":commentId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "commentId",
+                                                "value": "",
+                                                "description": "Unique identifier of the comment"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle like status on a comment. Creates a notification for the comment author when liked."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/actions/likes/posts/:postId",
+                "description": "Toggle like status on a post. Creates a notification for the post author when liked.",
+                 "item": [
+                            {
+                                "name": "like",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"liked\" : true\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/likes/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "likes",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "Unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle like status on a post. Creates a notification for the post author when liked."
+                                }
+                            },
+                            {
+                                "name": "unlike",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"liked\" : false\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/likes/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "likes",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "Unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle like status on a post. Creates a notification for the post author when liked."
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/actions/saves/posts/:postId",
+                "description": "Toggle save/bookmark status on a post. Saved posts can be accessed later from the user's profile.",
+                 "item": [
+                            {
+                                "name": "save",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"saved\" : true\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/saves/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "saves",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "Unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle save/bookmark status on a post. Saved posts can be accessed later from the user's profile."
+                                }
+                            },
+                            {
+                                "name": "unsave",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n  \"saved\" : false\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/actions/saves/posts/:postId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "actions",
+                                            "saves",
+                                            "posts",
+                                            ":postId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "postId",
+                                                "value": "",
+                                                "description": "Unique identifier of the post"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Toggle save/bookmark status on a post. Saved posts can be accessed later from the user's profile."
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Notifications",
+	            "item": [
+	                        {
+    "name": "/api/v1/notifications",
+                "description": "Retrieves all notifications for the authenticated user, including unread chat count",
+                 "item": [
+                            {
+                                "name": "Get notifications for the current user",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/notifications",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "notifications"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "limit",
+                                                "value": "10",
+                                                "description": "Number of notifications to return (default: 10)",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "offset",
+                                                "value": "0",
+                                                "description": "Number of notifications to skip (default: 0)",
+                                                "disabled": true
+                                            }
+                                        ]
+                                    },
+                                    "description": "Retrieves all notifications for the authenticated user, including unread chat count"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/notifications/:notificationId",
+                "description": "Deletes a specific notification for the authenticated user",
+                 "item": [
+                            {
+                                "name": "Delete a notification",
+                                "request": {
+                                    "method": "DELETE",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/notifications/:notificationId",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "notifications",
+                                            ":notificationId"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "notificationId",
+                                                "value": "",
+                                                "description": "The ID of the notification to delete"
+                                            }
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Deletes a specific notification for the authenticated user"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/notifications/count",
+                "description": "Retrieves the number of unread notifications and chat count for the authenticated user",
+                 "item": [
+                            {
+                                "name": "Get unread notification and chat count for the current user",
+                                "request": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/notifications/count",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "notifications",
+                                            "count"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Retrieves the number of unread notifications and chat count for the authenticated user"
+                                }
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/api/v1/notifications/read",
+                "description": "Marks multiple notifications as read for the authenticated user",
+                 "item": [
+                            {
+                                "name": "Mark notifications as read",
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "description": "",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n \"notificationIds\": \"<string>\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/v1/notifications/read",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "notifications",
+                                            "read"
+                                        ],
+                                        "variable": [
+                                        ],
+                                        "query": [
+                                        ]
+                                    },
+                                    "description": "Marks multiple notifications as read for the authenticated user"
+                                }
+                            }
+                            ]
+                        }
+	                    ]
+	        }
+    ],
+    
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+        }
+	]
+}
+

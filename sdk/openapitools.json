@@ -1,0 +1,81 @@
+{
+  "$schema": "../node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.12.0",
+    "generators": {
+      "docs": {
+        "generatorName": "html2",
+        "output": "./docs",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "postman-collection": {
+        "generatorName": "postman-collection",
+        "output": "./postman",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "ts-axios": {
+        "generatorName": "typescript-axios",
+        "output": "./platform/typescript-axios",
+        "inputSpec": "http://localhost:8001/api-json",
+        "additionalProperties": {
+          "removeOperationIdPrefix": true,
+          "operationIdNaming": "method",
+          "supportsES6": true,
+          "withInterfaces": true
+        }
+      },
+      "ts-fetch": {
+        "generatorName": "typescript-fetch",
+        "output": "./platform/typescript-fetch",
+        "inputSpec": "http://localhost:8001/api-json",
+        "additionalProperties": {
+          "removeOperationIdPrefix": true,
+          "operationIdNaming": "method",
+          "supportsES6": true,
+          "withInterfaces": true
+        }
+      },
+      "rust": {
+        "generatorName": "rust",
+        "output": "./platform/rust",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "python": {
+        "generatorName": "python",
+        "output": "./platform/python",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "java": {
+        "generatorName": "java",
+        "output": "./platform/java",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "go": {
+        "generatorName": "go",
+        "output": "./platform/go",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "kotlin": {
+        "generatorName": "kotlin",
+        "output": "./platform/kotlin",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "android": {
+        "generatorName": "android",
+        "output": "./platform/android",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "csharp": {
+        "generatorName": "csharp",
+        "output": "./platform/csharp",
+        "inputSpec": "http://localhost:8001/api-json"
+      },
+      "javascript": {
+        "generatorName": "javascript",
+        "output": "./platform/javascript",
+        "inputSpec": "http://localhost:8001/api-json"
+      }
+    }
+  }
+}

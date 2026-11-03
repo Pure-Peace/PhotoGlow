@@ -1,0 +1,20 @@
+FROM oven/bun:1
+
+WORKDIR /app
+
+COPY . .
+
+# Install dependencies
+RUN bun install
+
+# Generate admin database prisma client
+RUN cd admin && bun run db:generate
+
+# Generate photoglow database prisma client
+RUN cd database && bun install && bun run generate
+
+# Build admin application
+RUN cd admin && bun run build
+
+# Set entry command
+CMD ["sh", "-c", "cd admin && bun run db:migrate && bun run start"]

@@ -1,0 +1,14 @@
+FROM oven/bun:1
+
+WORKDIR /app
+
+COPY . .
+
+# Install dependencies
+RUN bun install
+
+# Build web application
+RUN cd web && bun run build
+
+# Set entry command
+CMD ["sh", "-c", "cd web && bun run start"]

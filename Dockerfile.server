@@ -1,0 +1,17 @@
+FROM oven/bun:1
+
+WORKDIR /app
+
+COPY . .
+
+# Install dependencies
+RUN bun install
+
+# Generate Prisma client
+RUN cd database && bun run generate
+
+# Build server
+RUN cd server && bun run build
+
+# Set entry command
+CMD ["sh", "-c", "cd database && bun run migrate && cd ../server && bun run start:prod"]

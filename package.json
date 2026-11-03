@@ -1,0 +1,21 @@
+{
+  "name": "photoglow",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "docker:up": "docker compose up -d",
+    "docker:build": "docker compose build",
+    "docker:down": "docker compose down"
+  },
+  "workspaces": [
+    "server",
+    "web",
+    "sdk",
+    "database",
+    "shared",
+    "admin"
+  ]
+}

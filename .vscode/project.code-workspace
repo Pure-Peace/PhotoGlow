@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "server",
+    },
+    {
+      "path": "web",
+    },
+    {
+      "path": "sdk",
+    },
+    {
+      "path": "database",
+    },
+  ],
+  "settings": {
+    "js/ts.tsserver.experimental.enableProjectDiagnostics": true,
+    "js/ts.suggest.completeFunctionCalls": true,
+    "js/ts.enablePromptUseWorkspaceTsdk": true,
+    "js/ts.surveys.enabled": false,
+    "js/ts.tsc.autoDetect": "on",
+    "js/ts.tsserver.watchOptions": {
+      "watchFile": "useFsEvents",
+      "watchDirectory": "useFsEvents",
+    },
+  },
+}

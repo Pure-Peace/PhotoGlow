@@ -1,0 +1,33 @@
+{
+  "name": "@photoglow/sdk",
+  "private": true,
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "gen": "bun run openapi-generator-cli generate --config ./openapitools.json --generator-key docs postman-collection ts-axios ts-fetch rust python java go kotlin android csharp javascript",
+    "docs": "openapi-generator-cli generate --config ./openapitools.json --generator-key docs",
+    "postman": "openapi-generator-cli generate --config ./openapitools.json --generator-key postman-collection",
+    "gen:ts": "bun run gen:ts-axios && bun run gen:ts-fetch",
+    "gen:ts-axios": "openapi-generator-cli generate --config ./openapitools.json --generator-key ts-axios",
+    "gen:ts-fetch": "openapi-generator-cli generate --config ./openapitools.json --generator-key ts-fetch",
+    "gen:rust": "openapi-generator-cli generate --config ./openapitools.json --generator-key rust",
+    "gen:python": "openapi-generator-cli generate --config ./openapitools.json --generator-key python",
+    "gen:java": "openapi-generator-cli generate --config ./openapitools.json --generator-key java",
+    "gen:go": "openapi-generator-cli generate --config ./openapitools.json --generator-key go",
+    "gen:kotlin": "openapi-generator-cli generate --config ./openapitools.json --generator-key kotlin",
+    "gen:android": "openapi-generator-cli generate --config ./openapitools.json --generator-key android",
+    "gen:csharp": "openapi-generator-cli generate --config ./openapitools.json --generator-key csharp",
+    "gen:javascript": "openapi-generator-cli generate --config ./openapitools.json --generator-key javascript"
+  },
+  "dependencies": {
+    "@photoglow/server": "workspace:*",
+    "axios": "^1.8.4"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.19.1",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

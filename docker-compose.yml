@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  # Database service
+  postgres:
+    image: postgres:17-alpine
+    container_name: photoglow-postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - '5432:5432'
+    networks:
+      - photoglow-network
+    restart: always
+
+  # Redis service
+  redis:
+    image: redis:7-alpine
+    container_name: photoglow-redis
+    ports:
+      - '6379:6379'
+    networks:
+      - photoglow-network
+    restart: always
+
+  # Backend service
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: photoglow-server
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - '8001:8001'
+    networks:
+      - photoglow-network
+    restart: always
+
+  # Frontend service
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: photoglow-web
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    ports:
+      - '8080:8080'
+    networks:
+      - photoglow-network
+    restart: always
+
+  # Admin service
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile.admin
+    container_name: photoglow-admin
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - '8081:8081'
+    networks:
+      - photoglow-network
+    restart: always
+
+  # Nginx service
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: photoglow-nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - photoglow-network
+    restart: always
+
+networks:
+  photoglow-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

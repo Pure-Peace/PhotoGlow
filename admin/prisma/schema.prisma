@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/photoglow-admin-prisma-client" // https://github.com/prisma/prisma/discussions/23223#discussioncomment-12925452
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("ADMIN_DATABASE_URL")
+}
+
+enum AdminRole {
+  SUPER_ADMIN
+  CONTENT_MODERATOR
+  USER_MANAGER
+  ANALYST
+}
+
+model Admin {
+  id                String    @id @default(uuid())
+  email             String    @unique
+  name              String
+  password          String
+  role              AdminRole @default(USER_MANAGER)
+  active            Boolean   @default(true)
+  lastLogin         DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  // Relations
+  sessions          AdminSession[]
+  logs              AdminLog[]
+}
+
+model AdminSession {
+  id        String   @id @default(uuid())
+  adminId   String
+  token     String   @unique
+  expiresAt DateTime
+  userAgent String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  // Relations
+  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([adminId])
+  @@index([token])
+  @@index([expiresAt])
+}
+
+model AdminLog {
+  id          String   @id @default(uuid())
+  adminId     String
+  action      String
+  entityType  String?
+  entityId    String?
+  details     String?  @db.Text
+  ipAddress   String?
+  createdAt   DateTime @default(now())
+
+  // Relations
+  admin       Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  @@index([adminId, createdAt])
+  @@index([entityType, entityId])
+  @@index([action])
+}
