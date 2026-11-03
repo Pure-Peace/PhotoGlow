@@ -3,6 +3,7 @@
 _Let your moments glow in the cloud_
 
 **[>> Design Documentation](./photoglow.pdf)**
+
 **Live Demo: [https://photoglow.xyz](https://photoglow.xyz)**
 
 
